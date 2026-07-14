@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Carol Detweiler</title>
+<meta name="description" content="Get in touch with author Carol Detweiler for book club visits, media inquiries, and speaking engagements.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<a href="index.html" class="logo">Carol Detweiler</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about-book.html">The Book</a></li>
+<li><a href="about-author.html">The Author</a></li>
+<li><a href="interview.html">Interview</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="scholarship.html">Scholarship</a></li>
+<li><a href="book-club.html">Book Club</a></li>
+<li><a href="contact.html" class="active">Contact</a></li>
+</ul>
+<div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+</nav>
+</header>
+
+<main class="page-padding">
+<section class="page-header">
+<div class="container">
+<h1 class="page-title">Get in Touch with Carol</h1>
+<p class="subtitle">Book clubs, media, educators, and readers — Carol would love to hear from you.</p>
+</div>
+</section>
+
+<section class="contact-section">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-info">
+<h2>Reach Out</h2>
+<p>Whether you're a reader with a question, a book club looking for a guest speaker, a journalist requesting an interview, or an educator interested in bringing this story to your classroom — Carol would love to hear from you.</p>
+<div class="contact-methods">
+<div class="contact-method"><i class="fas fa-envelope"></i><div><h3>Email</h3><a href="mailto:CrowsRedRibbon@gmail.com">CrowsRedRibbon@gmail.com</a></div></div>
+<div class="contact-method"><i class="fas fa-map-marker-alt"></i><div><h3>Location</h3><p>Oregon, USA</p></div></div>
+</div>
+</div>
+
+<form class="contact-form" onsubmit="handleFormSubmit(event)">
+<div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+<div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+<div class="form-group"><label for="reason">I'm reaching out as a...</label>
+<select id="reason" name="reason" required>
+<option value="">Please select...</option>
+<option>Reader</option>
+<option>Book Club Host</option>
+<option>Educator</option>
+<option>Journalist / Media</option>
+<option>Scholarship Inquiry</option>
+<option>Other</option>
+</select></div>
+<div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+<button type="submit" class="btn btn-primary btn-block">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="order-book alt-bg">
+<div class="container">
+<h2 class="section-title">Order the Book</h2>
+<p class="section-intro"><em>A Murder of Crows Fly with a Red Ribbon</em> is available in hardcover, paperback, and e-book formats.</p>
+<div class="center-cta">
+<a href="#" class="btn btn-primary"><i class="fab fa-amazon"></i> Amazon</a>
+<a href="#" class="btn btn-secondary-dark"><i class="fas fa-book"></i> Barnes &amp; Noble</a>
+<a href="#" class="btn btn-secondary-dark"><i class="fas fa-store"></i> Independent Booksellers</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-content container">
+<div class="footer-col"><h3>Carol Detweiler</h3><p>Author of <em>A Murder of Crows Fly with a Red Ribbon</em></p></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="about-book.html">The Book</a></li><li><a href="about-author.html">The Author</a></li><li><a href="scholarship.html">Scholarship Legacy</a></li></ul></div>
+<div class="footer-col"><h4>Connect</h4><div class="socials"><a href="mailto:CrowsRedRibbon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 Carol Detweiler. All Rights Reserved.</p></div>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

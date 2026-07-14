@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflections from Kosova | Carol Detweiler</title>
+<meta name="description" content="A photographic journey through the villages, mountains, and memorials of Kosova that inspired A Murder of Crows Fly with a Red Ribbon.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<a href="index.html" class="logo">Carol Detweiler</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about-book.html">The Book</a></li>
+<li><a href="about-author.html">The Author</a></li>
+<li><a href="interview.html">Interview</a></li>
+<li><a href="gallery.html" class="active">Gallery</a></li>
+<li><a href="scholarship.html">Scholarship</a></li>
+<li><a href="book-club.html">Book Club</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+</nav>
+</header>
+
+<main class="page-padding">
+<section class="page-header">
+<div class="container">
+<h1 class="page-title">Reflections from Kosova</h1>
+<p class="subtitle">A Photographic Journey Through the Land That Inspired the Novel</p>
+</div>
+</section>
+
+<section class="gallery-intro">
+<div class="container">
+<p class="lead-text">Over the course of writing <em>A Murder of Crows Fly with a Red Ribbon</em>, Carol Detweiler made numerous trips to Kosova — walking the villages, the mountains, and the memorials that shape Ariana's story. These photographs are windows into the landscape of the novel: the Balkan peaks that watched over the war, the quiet streets where families were torn apart, and the resilient beauty of a country still writing its future.</p>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+<div class="masonry-gallery" id="gallery">
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-1.jpg', 'Balkan mountains at sunset')"><img src="images/gallery/kosova-1.jpg" alt="Balkan mountains at sunset" loading="lazy"><div class="caption">Balkan Mountains at Sunset</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-2.jpg', 'Village street in Kosova')"><img src="images/gallery/kosova-2.jpg" alt="Village street in Kosova" loading="lazy"><div class="caption">A Quiet Village Street</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-3.jpg', 'Memorial in Prishtina')"><img src="images/gallery/kosova-3.jpg" alt="Memorial in Prishtina" loading="lazy"><div class="caption">Memorial in Prishtina</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-4.jpg', 'Mountain pass')"><img src="images/gallery/kosova-4.jpg" alt="Mountain pass" loading="lazy"><div class="caption">The Mountain Pass</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-5.jpg', 'Family home')"><img src="images/gallery/kosova-5.jpg" alt="Family home" loading="lazy"><div class="caption">A Family Home Rebuilt</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-6.jpg', 'Meeting with President Sejdiu')"><img src="images/gallery/kosova-6.jpg" alt="Meeting with President Sejdiu" loading="lazy"><div class="caption">With President Fatmir Sejdiu</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-7.jpg', 'Kosovar children')"><img src="images/gallery/kosova-7.jpg" alt="Kosovar children" loading="lazy"><div class="caption">The Next Generation</div></div>
+<div class="gallery-item" onclick="openLightbox('images/gallery/kosova-8.jpg', 'Countryside landscape')"><img src="images/gallery/kosova-8.jpg" alt="Countryside landscape" loading="lazy"><div class="caption">Kosovar Countryside</div></div>
+</div>
+</div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<span class="lightbox-close">&times;</span>
+<img id="lightbox-img" src="" alt="">
+<div id="lightbox-caption"></div>
+</div>
+</main>
+
+<footer>
+<div class="footer-content container">
+<div class="footer-col"><h3>Carol Detweiler</h3><p>Author of <em>A Murder of Crows Fly with a Red Ribbon</em></p></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="about-book.html">The Book</a></li><li><a href="about-author.html">The Author</a></li><li><a href="scholarship.html">Scholarship Legacy</a></li></ul></div>
+<div class="footer-col"><h4>Connect</h4><div class="socials"><a href="mailto:CrowsRedRibbon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 Carol Detweiler. All Rights Reserved.</p></div>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
