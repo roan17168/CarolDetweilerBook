@@ -14,6 +14,33 @@ const navSlide = () => {
     }
 };
 
+// MOBILE DROPDOWN TOGGLE
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 968) {
+            e.preventDefault();
+            const dropdown = toggle.parentElement;
+            const isOpen = dropdown.classList.contains('active');
+
+            document.querySelectorAll('.dropdown.active').forEach(openDropdown => {
+                if (openDropdown !== dropdown) {
+                    openDropdown.classList.remove('active');
+                }
+            });
+
+            dropdown.classList.toggle('active', !isOpen);
+        }
+    });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 968) {
+        document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+});
+
 // YOUTUBE IFRAME API — Interview Page
 let player;
 function onYouTubeIframeAPIReady() {
