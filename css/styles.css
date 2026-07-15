@@ -38,8 +38,29 @@ h1, h2, h3, h4, blockquote, .logo { font-family: 'Playfair Display', serif; }
     padding: 20px 5%; background: var(--charcoal); color: white;
     position: fixed; top: 0; width: 100%; z-index: 1000;
 }
-.logo { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 700; }
+.logo {
+    display: flex; flex-direction: column; align-items: flex-start;
+    line-height: 1.2; text-decoration: none; color: white;
+}
+.logo-title {
+    font-size: 1.1rem; font-weight: 700; color: white;
+    font-family: 'Playfair Display', serif;
+}
+.logo-author {
+    font-size: 0.7rem; font-weight: 300; color: var(--gold);
+    font-style: italic; margin-top: 2px;
+}
 .nav-links { display: flex; list-style: none; }
+
+@media screen and (max-width: 768px) {
+    .logo-title { font-size: 0.9rem; line-height: 1.1; }
+    .logo-author { font-size: 0.65rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-title { font-size: 0.75rem; }
+    .logo-author { font-size: 0.6rem; }
+}
 .nav-links li a {
     color: white; text-decoration: none; margin-left: 25px;
     font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;
