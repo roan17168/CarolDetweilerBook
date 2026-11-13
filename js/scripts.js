@@ -43,17 +43,32 @@ window.addEventListener('resize', () => {
 
 // YOUTUBE IFRAME API — Interview Page
 let player;
-function onYouTubeIframeAPIReady() {
+function initializePlayer() {
     const playerEl = document.getElementById('player');
-    if (playerEl) {
-        player = new YT.Player('player', {
-            height: '480',
-            width: '854',
-            videoId: 'UgVMq9b5Pu4',
-            playerVars: { 'rel': 0, 'modestbranding': 1 }
-        });
-    }
+    if (!playerEl || player) return;
+    player = new YT.Player('player', {
+        height: '480',
+        width: '854',
+        videoId: 'UgVMq9b5Pu4',
+        playerVars: { 'rel': 0, 'modestbranding': 1 }
+    });
 }
+
+function onYouTubeIframeAPIReady() {
+    initializePlayer();
+}
+
+// If the IFrame API finished loading before this script ran, the callback above
+// never fires. Initialise directly when the API is already available.
+if (window.YT && typeof window.YT.Player === 'function') {
+    initializePlayer();
+}
+
+window.addEventListener('load', () => {
+    if (!player && window.YT && typeof window.YT.Player === 'function') {
+        initializePlayer();
+    }
+});
 
 function seekTo(seconds) {
     if (player && typeof player.seekTo === 'function') {
