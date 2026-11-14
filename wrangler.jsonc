@@ -1,0 +1,15 @@
+{
+  // Cloudflare Worker config for this site.
+  // There is no "main" entry point: this Worker is assets-only, so no Worker
+  // script ever runs — Cloudflare just serves these files from its edge network.
+  "name": "caroldetweilerbook",
+  "compatibility_date": "2026-11-14",
+  "assets": {
+    // The site is plain HTML at the repository root (index.html, about-book.html,
+    // css/, js/, images/), so the asset directory is the root itself.
+    "directory": "./",
+    // Multi-page site with explicit .html links; no client-side router, so
+    // unknown paths should return a plain 404 rather than a fallback page.
+    "not_found_handling": "none"
+  }
+}
