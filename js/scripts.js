@@ -106,10 +106,55 @@ function closeLightbox() {
 }
 
 // CONTACT FORM
+// The site is static, so nothing is posted to a server. Instead the form builds a
+// pre-filled email and hands it to the visitor's own mail app to send.
+const CONTACT_EMAIL = 'CrowsRedRibbon@gmail.com';
+const MESSAGE_LIMIT = 1500; // mailto URLs get truncated by some mail clients
+
+function buildMailtoUrl(name, email, reason, message) {
+    const subject = reason
+        ? 'Website message from ' + name + ' (' + reason + ')'
+        : 'Website message from ' + name;
+    const body = [
+        'Name: ' + name,
+        'Email: ' + email,
+        'Reaching out as: ' + reason,
+        '',
+        message,
+        '',
+        '--',
+        'Sent from the contact form at caroldetweilerbook'
+    ].join('\n');
+    return 'mailto:' + CONTACT_EMAIL +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+}
+
 function handleFormSubmit(event) {
     event.preventDefault();
-    alert('Thank you for reaching out! Carol will get back to you soon.\n\n(To make this form live, connect it to a service like Formspree, Netlify Forms, or your own backend.)');
-    event.target.reset();
+
+    const form = event.target;
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const reason = form.elements.reason.value;
+    let message = form.elements.message.value.trim();
+
+    const status = document.getElementById('form-status');
+    let truncated = false;
+    if (message.length > MESSAGE_LIMIT) {
+        message = message.slice(0, MESSAGE_LIMIT) + '...';
+        truncated = true;
+    }
+
+    const url = buildMailtoUrl(name, email, reason, message);
+
+    if (status) {
+        status.textContent = truncated
+            ? 'Opening your email app. Your message was long, so it was trimmed - send the rest as a reply.'
+            : 'Opening your email app with your message ready to send. If nothing happens, email ' + CONTACT_EMAIL + ' directly.';
+    }
+
+    window.location.href = url;
 }
 
 // KEYBOARD ACCESSIBILITY — Jump Points
